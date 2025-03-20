@@ -1,11 +1,13 @@
 import { isEmpty, useValidators } from '@basic/validators'
 
-export const is = (value, ...parameters) => {
+export const is = (source, ...parameters) => {
     const validators = useValidators()
 
     if (isEmpty(parameters)) {
-        return validators.has(value)
+        return validators.has(source)
     }
 
-    return validators.get(parameters.shift())(value)
+    const validator = parameters.shift()
+
+    return is(validator) && validators.get(validator)(source)
 }

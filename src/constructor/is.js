@@ -1,11 +1,11 @@
 import { isEmpty, isFunction } from '@basic'
 
-export const is = (value, ...parameters) => {
+export const is = (source, ...parameters) => {
     if (isEmpty(parameters)) {
-        return isFunction(value)
+        return isFunction(source)
     }
 
     const constructor = parameters.shift()
 
-    return is(constructor) && value instanceof constructor
+    return is(constructor) && source instanceof constructor
 }

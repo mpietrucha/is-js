@@ -1,12 +1,14 @@
 import { is as isBasic } from '@basic'
 import { is as isConstructor } from '@constructor'
 
-export const is = (value, type) => {
-    if (isBasic(type)) {
-        return isBasic(value, type)
+export const is = (source, value) => {
+    if (isBasic(value)) {
+        return isBasic(source, value)
     }
 
-    if (isConstructor(type)) {
-        return isConstructor(value, type)
+    if (isConstructor(value)) {
+        return isConstructor(source, value)
     }
+
+    return source === value
 }
