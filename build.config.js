@@ -3,6 +3,7 @@ import { defineBuildConfig } from 'unbuild'
 
 export const alias = {
     '@': resolve('src'),
+    '@none': resolve('src/none'),
     '@basic': resolve('src/basic'),
     '@constructor': resolve('src/constructor'),
 }
