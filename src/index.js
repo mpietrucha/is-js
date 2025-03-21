@@ -20,11 +20,14 @@ export {
     notObject,
     notString,
     notUndefined,
-} from '@basic'
+} from '@mpietrucha/is-basic'
 
-export { createNone, is as isNone, None, not as notNone } from '@none'
+export { createNone, is as isNone, not as notNone } from '@mpietrucha/none'
 
-export { is as isConstructor, not as notConstructor } from '@constructor'
+export {
+    is as isConstructor,
+    not as notConstructor,
+} from '@mpietrucha/is-constructor'
 
 export { is }
 

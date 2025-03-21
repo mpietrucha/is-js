@@ -1,5 +1,5 @@
-import { is as isBasic } from '@basic'
-import { is as isConstructor } from '@constructor'
+import { is as isBasic } from '@mpietrucha/is-basic'
+import { is as isConstructor } from '@mpietrucha/is-constructor'
 import { isEqualWith } from 'lodash-es'
 
 export const is = (source, value, handler) => {

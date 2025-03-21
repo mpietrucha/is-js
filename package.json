@@ -12,18 +12,6 @@
         ".": {
             "import": "./dist/index.mjs",
             "require": "./dist/index.cjs"
-        },
-        "./none": {
-            "import": "./dist/none/index.mjs",
-            "require": "./dist/none/index.cjs"
-        },
-        "./basic": {
-            "import": "./dist/basic/index.mjs",
-            "require": "./dist/basic/index.cjs"
-        },
-        "./constructor": {
-            "import": "./dist/constructor/index.mjs",
-            "require": "./dist/constructor/index.cjs"
         }
     },
     "main": "./dist/index.cjs",
@@ -38,6 +26,9 @@
     },
     "prettier": "@mpietrucha/prettier",
     "dependencies": {
+        "@mpietrucha/is-basic": "^0.0.1",
+        "@mpietrucha/is-constructor": "^0.0.1",
+        "@mpietrucha/none": "^0.0.1",
         "@mpietrucha/prettier": "^1.0.0",
         "lodash-es": "^4.17.21"
     },
