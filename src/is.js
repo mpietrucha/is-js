@@ -1,6 +1,6 @@
-import { is as isBasic } from '@mpietrucha/is-basic'
-import { is as isConstructor } from '@mpietrucha/is-constructor'
-import { isEqualWith } from 'lodash-es'
+import { isBasic } from '@mpietrucha/is-basic'
+import { isConstructor } from '@mpietrucha/is-constructor'
+import { isEqualWith, negate } from 'lodash-es'
 
 export const is = (source, value, handler) => {
     if (isBasic(value)) {
@@ -13,3 +13,5 @@ export const is = (source, value, handler) => {
 
     return isEqualWith(source, value, handler)
 }
+
+export const not = negate(is)

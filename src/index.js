@@ -1,34 +1,34 @@
-import { is } from '@/is'
-import { negate } from 'lodash-es'
-
 export {
+    Empty,
+    Integer,
+    Null,
+    Undefined,
     isArray,
-    is as isBasic,
+    isBasic,
     isBoolean,
     isEmpty,
     isFunction,
+    isInteger,
     isNull,
+    isNumber,
     isObject,
     isString,
     isUndefined,
     notArray,
-    not as notBasic,
+    notBasic,
     notBoolean,
     notEmpty,
     notFunction,
+    notInteger,
     notNull,
+    notNumber,
     notObject,
     notString,
     notUndefined,
 } from '@mpietrucha/is-basic'
 
-export { createNone, is as isNone, not as notNone } from '@mpietrucha/none'
+export { None, createNone, isNone, none, notNone } from '@mpietrucha/none'
 
-export {
-    is as isConstructor,
-    not as notConstructor,
-} from '@mpietrucha/is-constructor'
+export { isConstructor, notConstructor } from '@mpietrucha/is-constructor'
 
-export { is }
-
-export const not = negate(is)
+export { is, not } from '@/is'
