@@ -1,17 +1,23 @@
-import { isBasic } from '@mpietrucha/is-basic'
-import { isConstructor } from '@mpietrucha/is-constructor'
-import { isEqualWith, negate } from 'lodash-es'
+import { isFunction, useNegate } from '@mpietrucha/function'
+import { isBasic, isType } from '@mpietrucha/is-basic'
+import { isClass, isInstanceOf } from '@mpietrucha/is-constructor'
+import { confirm } from '@mpietrucha/value'
+import { isEqual } from 'lodash-es'
 
-export const is = (source, value, handler) => {
+export const is = (source, value) => {
     if (isBasic(value)) {
-        return isBasic(source, value)
+        return isType(source, value)
     }
 
-    if (isConstructor(value)) {
-        return isConstructor(source, value)
+    if (isClass(value)) {
+        return isInstanceOf(source, value)
     }
 
-    return isEqualWith(source, value, handler)
+    if (isFunction(value)) {
+        return confirm(value, source)
+    }
+
+    return isEqual(source, value)
 }
 
-export const not = negate(is)
+export const not = useNegate(is)
