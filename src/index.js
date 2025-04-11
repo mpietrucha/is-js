@@ -29,7 +29,7 @@ export {
     notUndefined,
 } from '@mpietrucha/is-basic'
 
-export { None, isNone, none, notNone } from '@mpietrucha/none'
+export { None, createNone, isNone, notNone } from '@mpietrucha/none'
 
 export {
     isClass,

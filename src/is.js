@@ -1,8 +1,7 @@
 import { isFunction, useNegate } from '@mpietrucha/function'
-import { isBasic, isType } from '@mpietrucha/is-basic'
+import { isBasic, isEqual, isType } from '@mpietrucha/is-basic'
 import { isClass, isInstanceOf } from '@mpietrucha/is-constructor'
-import { confirm } from '@mpietrucha/value'
-import { isEqual } from 'lodash-es'
+import { useConfirm } from '@mpietrucha/value'
 
 export const is = (source, value) => {
     if (isBasic(value)) {
@@ -14,7 +13,7 @@ export const is = (source, value) => {
     }
 
     if (isFunction(value)) {
-        return confirm(value, source)
+        return useConfirm(value, source)
     }
 
     return isEqual(source, value)
