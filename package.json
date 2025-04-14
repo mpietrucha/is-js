@@ -30,7 +30,7 @@
         "@mpietrucha/is-basic": "^0.0.5",
         "@mpietrucha/is-constructor": "^0.0.5",
         "@mpietrucha/none": "^0.0.5",
-        "@mpietrucha/value": "^0.0.4"
+        "@mpietrucha/value": "^0.0.5"
     },
     "devDependencies": {
         "@mpietrucha/prettier": "^1.0.0",
